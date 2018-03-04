@@ -20,6 +20,7 @@ public class Symulator {
         Kaczka drewniana = new DrewnianaKaczka("Dębowa");
         Kaczka mandarynka = new MandarynkaKaczka("samiec");
 
+
         List<Kaczka> kaczki = new ArrayList<Kaczka>();
         kaczki.add(dzika);
         kaczki.add(gumowa);
@@ -46,5 +47,11 @@ public class Symulator {
         gesAdapter.lataj();
         gesAdapter.plywaj();
         gesAdapter.kwacz();
+        System.out.println("---------------NOWA KACZKA--------");
+        Kaczka nowa = Kaczka.dajKaczke(KaczkaTypy.ZepsutaGumowa,"dzika");
+        nowa.wyswietl();
+        nowa.kwacz();
+        nowa.lataj();
+        nowa.plywaj();
     }
 }

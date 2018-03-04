@@ -1,6 +1,8 @@
 package pl.sternik.aw.kaczki;
 
+import pl.sternik.aw.kaczki.ges.Ges;
 import pl.sternik.aw.kaczki.kwakanie.Kwakanie;
+import pl.sternik.aw.kaczki.kwakanie.Niemowa;
 import pl.sternik.aw.kaczki.latanie.Latanie;
 
 public abstract class Kaczka implements Latanie, Kwakanie {
@@ -55,4 +57,30 @@ public abstract class Kaczka implements Latanie, Kwakanie {
         this.kwakanie = kwakanie;
     }
 
+    public static Kaczka dajKaczke(KaczkaTypy typ, String name) {
+        switch (typ) {
+            case Dzika:
+                return new DzikaKaczka(name);
+
+            case Mandarynka:
+                return new MandarynkaKaczka(name);
+
+            case Drewniana:
+                return new DrewnianaKaczka(name);
+
+            case Gumowa:
+                return new GumowaKaczka(name);
+
+            case ZepsutaGumowa:
+                GumowaKaczka gumowaKaczka = new GumowaKaczka(name);
+                gumowaKaczka.setKwakanie(new Niemowa());
+                return gumowaKaczka;
+
+            case Ges:
+                return new GesKaczkaAdapter(new Ges(name));
+
+            default:
+                return new DzikaKaczka("Dzika domyślna");
+        }
+    }
 }
