@@ -1,2 +1,1 @@
 # sternik-kaczki
-# sternik-kaczki
