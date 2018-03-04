@@ -19,23 +19,23 @@ public class Symulator {
         Kaczka drewniana = new DrewnianaKaczka("Dębowa");
         Kaczka mandarynka = new MandarynkaKaczka("samiec");
 
-//        List<Kaczka> kaczki = new ArrayList<Kaczka>();
-//        kaczki.add(dzika);
-//        kaczki.add(gumowa);
-//        kaczki.add(drewniana);
-//        kaczki.add(mandarynka);
-//
-//        for (Kaczka kaczka : kaczki) {
-//            kaczka.wyswietl();
-//            kaczka.lataj();
-//            kaczka.plywaj();
-//            kaczka.kwacz();
-//        }
-//        System.out.println("-------------------------------");
-//        gumowa.kwacz();
-//
-//        gumowa.setKwakanie(new Niemowa());
-//
-//        gumowa.kwacz();
+        List<Kaczka> kaczki = new ArrayList<Kaczka>();
+        kaczki.add(dzika);
+        kaczki.add(gumowa);
+        kaczki.add(drewniana);
+        kaczki.add(mandarynka);
+
+        for (Kaczka kaczka : kaczki) {
+            kaczka.wyswietl();
+            kaczka.lataj();
+            kaczka.plywaj();
+            kaczka.kwacz();
+        }
+        System.out.println("-------------------------------");
+        gumowa.kwacz();
+
+        gumowa.setKwakanie(new Niemowa());
+
+        gumowa.kwacz();
     }
 }
