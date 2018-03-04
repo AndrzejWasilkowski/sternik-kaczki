@@ -1,5 +1,6 @@
 package pl.sternik.aw.kaczki;
 
+import pl.sternik.aw.kaczki.ges.Ges;
 import pl.sternik.aw.kaczki.kwakanie.Niemowa;
 
 import java.util.ArrayList;
@@ -33,9 +34,17 @@ public class Symulator {
         }
         System.out.println("-------------------------------");
         gumowa.kwacz();
-
         gumowa.setKwakanie(new Niemowa());
-
         gumowa.kwacz();
+        System.out.println("---------------GĘŚ-------------");
+        Ges ges = new Ges("Gąska");
+        Kaczka gesAdapter = new GesKaczkaAdapter(ges);
+
+        kaczki.add(gesAdapter);
+
+        gesAdapter.wyswietl();
+        gesAdapter.lataj();
+        gesAdapter.plywaj();
+        gesAdapter.kwacz();
     }
 }
